@@ -1,0 +1,66 @@
+.sidebar {
+
+    width: 240px;
+    height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    background: #1f2937;
+
+    color: white;
+
+    padding: 20px;
+
+}
+
+.logo {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+
+}
+
+.sidebar a {
+
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+
+    font-size: 17px;
+
+}
+
+.sidebar a:hover {
+
+    background: #2563eb;
+
+}
+
+.active-link {
+
+    background: #2563eb;
+
+    font-weight: bold;
+
+}
+
+.sidebar i {
+
+    margin-right: 10px;
+
+}

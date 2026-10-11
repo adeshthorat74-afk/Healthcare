@@ -1,0 +1,434 @@
+
+
+/* =====================================
+   HOSPITAL DASHBOARD - FINAL LAYOUT
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    min-height: 100%;
+    width: 96%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    
+}
+
+/* Main wrapper */
+.hospital-dashboard {
+    width: 100%;
+    min-height: 100vh;
+    background: #f4f7fb;
+}
+
+/* Sidebar is 220px wide */
+.hospital-dashboard .dashboard-main {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    max-width: calc(100% - 220px);
+    min-width: 0;
+    padding: 24px;
+    padding-top: 110px;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 6px;
+    font-size: clamp(24px, 2vw, 32px);
+    font-weight: 700;
+    color: #172033;
+}
+
+.dashboard-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.dashboard-eyebrow {
+    display: block;
+    margin-bottom: 6px;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.dashboard-refresh {
+    flex-shrink: 0;
+}
+
+/* =====================================
+   STATISTICS
+===================================== */
+
+.dashboard-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.dashboard-stat-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 20px 12px;
+    background: #fff;
+    color: #222;
+    text-decoration: none;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-stat-card:hover {
+    color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.dashboard-stat-icon.blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.dashboard-stat-icon.teal {
+    background: #ccfbf1;
+    color: #0f766e;
+}
+
+.dashboard-stat-icon.purple {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.dashboard-stat-icon.orange {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+.dashboard-stat-info {
+    min-width: 0;
+}
+
+.dashboard-stat-info span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.dashboard-stat-info h2 {
+    margin: 6px 0 0;
+    font-size: clamp(19px, 1.7vw, 26px);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-stat-arrow {
+    display: none;
+}
+
+/* Existing card styles */
+.dashboard-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    min-width: 0;
+    border: none;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+}
+
+.dashboard-icon {
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+
+.dashboard-card h3 {
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.dashboard-card h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+.dashboard-section {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 28px;
+}
+
+.dashboard-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.dashboard-section-heading h2 {
+    margin: 0 0 5px;
+    color: #172033;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.dashboard-section-heading p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.dashboard-view-link {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* =====================================
+   QUICK ACTIONS
+===================================== */
+
+.dashboard-action-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.dashboard-action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    color: #222;
+    text-decoration: none;
+}
+
+.dashboard-action-card:hover {
+    color: #2563eb;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-action-icon {
+    display: none;
+}
+
+.dashboard-action-card h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-action-card p {
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.dashboard-action-card > i:last-child {
+    display: none;
+}
+
+/* =====================================
+   CHART
+===================================== */
+
+.chart-container,
+.dashboard-chart-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-top: 18px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.dashboard-chart-card canvas,
+.chart-container canvas {
+    display: block;
+    max-width: 100% !important;
+}
+
+/* =====================================
+   TABLES
+===================================== */
+
+.dashboard-table-card {
+    width: 100%;
+    min-width: 0;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.dashboard-table-card .table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.dashboard-table th {
+    background: #f8fafc;
+    color: #475569;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    padding: 12px;
+}
+
+.dashboard-empty {
+    padding: 24px !important;
+    color: #64748b !important;
+    text-align: center;
+}
+
+/* =====================================
+   LOADING AND FOOTER
+===================================== */
+
+.dashboard-loading {
+    display: flex;
+    min-height: 220px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-footer {
+    padding: 20px 10px;
+    color: #64748b;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* =====================================
+   SMALL DESKTOP / TABLET
+===================================== */
+
+@media (max-width: 1100px) {
+    .hospital-dashboard .dashboard-main {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .dashboard-stat-grid,
+    .dashboard-action-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+    .hospital-dashboard .dashboard-main {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 90px 14px 20px;
+    }
+
+    .dashboard-stat-grid,
+    .dashboard-action-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .dashboard-stat-card {
+        justify-content: flex-start;
+        padding: 18px;
+    }
+
+    .dashboard-card {
+        height: 160px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 24px;
+    }
+
+    .dashboard-section-heading h2 {
+        font-size: 18px;
+    }
+
+    .chart-container,
+    .dashboard-chart-card,
+    .dashboard-table-card {
+        padding: 12px;
+    }
+}

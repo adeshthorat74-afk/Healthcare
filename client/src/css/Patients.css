@@ -1,0 +1,141 @@
+/* Main Container */
+.patient-container {
+    margin-left: 240px;
+    padding: 30px;
+    background: #f4f7fc;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.patient-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Form */
+.patient-form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.patient-form input,
+.patient-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.patient-form input:focus,
+.patient-form select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52,152,219,.3);
+}
+
+/* Submit Button */
+.submit-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    background: #217dbb;
+}
+
+/* Table */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.patient-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.patient-table thead {
+    background: #3498db;
+    color: white;
+}
+
+.patient-table th,
+.patient-table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.patient-table tbody tr:hover {
+    background: #f5f9ff;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2px;
+    transition: .3s;
+}
+
+.edit-btn {
+    background: #f39c12;
+}
+
+.edit-btn:hover {
+    background: #d68910;
+}
+
+.delete-btn {
+    background: #e74c3c;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .patient-container{
+        margin-left:0;
+        padding:15px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .patient-table{
+        display:block;
+        overflow-x:auto;
+    }
+
+}

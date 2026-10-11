@@ -1,0 +1,300 @@
+/* =========================================
+   ACTIVITY PAGE
+========================================= */
+
+.activity-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f5f7fb;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.activity-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.activity-header p {
+    margin: 7px 0 0;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   REFRESH BUTTON
+========================================= */
+
+.refresh-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.refresh-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.activity-card {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.activity-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.activity-card-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.activity-count {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-table th {
+    background: #f9fafb;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    padding: 15px 18px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.activity-table td {
+    padding: 15px 18px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #4b5563;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.activity-table tbody tr {
+    transition: background 0.2s;
+}
+
+.activity-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.activity-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   ID
+========================================= */
+
+.id-badge {
+    color: #374151;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ACTION BADGE
+========================================= */
+
+.action-badge {
+    display: inline-block;
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+    max-width: 350px;
+}
+
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
+
+.delete-btn {
+    border: none;
+    background: #ef4444;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.activity-error {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    padding: 13px 16px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.activity-empty {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.activity-empty h3 {
+    margin: 8px 0;
+    color: #374151;
+    font-size: 20px;
+}
+
+.activity-empty p {
+    color: #6b7280;
+    margin: 5px 0;
+}
+
+
+/* =========================================
+   LOADER
+========================================= */
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid #2563eb;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .activity-page {
+        padding: 20px;
+    }
+
+    .activity-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .activity-header h1 {
+        font-size: 26px;
+    }
+
+    .refresh-btn {
+        width: 100%;
+    }
+
+    .activity-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .activity-table {
+        min-width: 850px;
+    }
+}

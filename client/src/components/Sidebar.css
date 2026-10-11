@@ -1,0 +1,144 @@
+
+.hospital-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    padding: 22px 14px;
+    box-sizing: border-box;
+    background: #1f2937;
+    color: #fff;
+    z-index: 1100;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.sidebar-brand-icon {
+    font-size: 28px;
+}
+
+.sidebar-brand h2 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sidebar-section-title {
+    margin: 0 10px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #9ca3af;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 10px;
+    border-radius: 8px;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background: #374151;
+    color: #fff;
+}
+
+.sidebar-link.active {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+}
+
+.sidebar-link-icon {
+    width: 22px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.sidebar-logout-container {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.sidebar-logout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sidebar-logout:hover {
+    background: #b91c1c;
+}
+
+.sidebar-mobile-toggle,
+.sidebar-backdrop {
+    display: none;
+}
+
+/* Mobile sidebar */
+@media (max-width: 768px) {
+    .hospital-sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+    }
+
+    .hospital-sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-mobile-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1200;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 6px;
+        background: #2563eb;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .sidebar-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1050;
+        border: none;
+        background: rgba(0, 0, 0, 0.45);
+    }
+}

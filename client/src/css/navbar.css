@@ -1,0 +1,33 @@
+.navbar-custom {
+
+    margin-left: 240px;
+
+    height: 70px;
+
+    padding-left: 30px;
+
+    padding-right: 30px;
+
+    background: white;
+
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.navbar-custom h4 {
+
+    color: #0d6efd;
+
+    font-weight: bold;
+
+}
+
+.navbar-custom button {
+
+    border-radius: 8px;
+
+}
